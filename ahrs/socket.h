@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string>
 #include <errno.h>
-#include <sys/signal.h.h>
+#include <sys/signal.h>
 
 class Socket
 {
