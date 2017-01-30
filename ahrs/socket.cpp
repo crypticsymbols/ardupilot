@@ -3,11 +3,11 @@
 Socket::Socket() {
   // Ignore sigpipe so client death does not kill server
   signal(SIGPIPE, SIG_IGN);
-  socket_path = "/tmp/socket";
-  phrase = "Stuff this in your pipe and smoke it\n";
+  // socket_path = 
+  
 }
 
-Socket::send() {
+void Socket::send() {
   if (has_client()){
     client_return = write(client_socket, phrase, strlen(phrase)+1);
     if (client_return == -1) {
@@ -21,7 +21,7 @@ Socket::send() {
   }
 }
 
-Socket::has_client() {
+bool Socket::has_client() {
 if ( (client_socket = accept(sockfd, NULL, NULL)) == -1) {
     printf("accept error");
     return false;
@@ -30,7 +30,7 @@ if ( (client_socket = accept(sockfd, NULL, NULL)) == -1) {
   }
 }
 
-Socket::setup() {
+void Socket::setup() {
   // Make socket
   if ( (sockfd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1) {
     printf("socket error");

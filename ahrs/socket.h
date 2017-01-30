@@ -3,8 +3,9 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 #include <errno.h>
+#include <sys/signal.h.h>
 
 class Socket
 {
@@ -14,8 +15,8 @@ public:
     void setup();
     bool has_client();
 private:
-    std::string socket_path;
-    std::string socket_path;
+    const char * socket_path = "/tmp/socket";
+    const char * phrase = "Stuff this in your pipe and smoke it\n";
     struct sockaddr_un addr;
     int sockfd,client_socket,client_return;
 };
