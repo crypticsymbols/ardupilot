@@ -5,5 +5,5 @@ sudo ln -s /usr/bin/arm-unknown-linux-gnueabihf-pkg-config /usr/bin/arm-linux-gn
 sudo chmod a+x /usr/bin/arm-linux-gnueabihf-pkg-config
 waf configure --board=navio
 
-waf ahrs
+waf --targets bin/ahrs
 waf copter
