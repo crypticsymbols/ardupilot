@@ -8,10 +8,10 @@
 
 // offsets for motors in motor_out and _motor_filtered arrays
 #define AP_MOTORS_MOT_1 0U
-#define AP_MOTORS_MOT_2 1U
+#define AP_MOTORS_MOT_2 4U
 #define AP_MOTORS_MOT_3 2U
 #define AP_MOTORS_MOT_4 3U
-#define AP_MOTORS_MOT_5 4U
+#define AP_MOTORS_MOT_5 1U
 #define AP_MOTORS_MOT_6 5U
 #define AP_MOTORS_MOT_7 6U
 #define AP_MOTORS_MOT_8 7U
